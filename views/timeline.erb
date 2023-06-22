@@ -1,0 +1,19 @@
+<header>
+  <h2 class="headline">Timeline</h2>
+    <nav class="new"><a href="/new_slander/<%=@username%>">New Slander</a></nav>
+</header>
+
+<ul>
+  <% sort_slanders(@slanders) do |slander| %>
+    <li class="single_slander">
+      <a>
+        <h2 class="username"><%= slander["username"] %></h2>
+        <h3 class="paragraph"><%= slander["paragraph"] %></h3>
+        <p class="slander_date">
+          <%= slander["date_created"] %>
+        </p>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
