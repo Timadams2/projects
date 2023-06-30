@@ -28,4 +28,13 @@ class DatabasePersistence
       tuple["id"]
     end[0].to_i
   end
+  
+  def delete_slander(paragraph)
+    sql = "DELETE FROM slanders WHERE paragraph = $1"
+    db.exec_params(sql, [paragraph])
+  end
+  
+  def valid_username?(username)
+    
+  end
 end

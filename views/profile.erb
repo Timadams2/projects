@@ -1,7 +1,14 @@
 <header>
-  <h2 class="headline"><%= @username %></h2>
-    <nav class="new"><a href="/new_slander/<%=@username%>">New Slander</a></nav>
+  <h2 class="headline">Timeline</h2>
 </header>
+
+<% if logged_in? %>
+  <nav class="login_status"><a href="/profile/signout">Sign Out</a></nav>
+<% else %>
+  <nav class="login_status"><a href="/profile/login">Login</a></nav>
+<% end %>
+
+<nav class="new"><a href="/new_slander/<%=@username%>">New Slander</a></nav>
 
 <ul>
   <% sort_slanders(@slanders) do |slander| %>
