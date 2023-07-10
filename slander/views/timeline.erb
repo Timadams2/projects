@@ -1,0 +1,15 @@
+<nav class="new"><a href="/profile/<%=session[:username]%>">Profile</a></nav>
+
+<ul>
+  <% sort_slanders(@slanders) do |slander| %>
+    <li class="single_slander">
+      <a>
+        <h2 class="username"><a href=/profile/<%=slander["username"]%>><%= slander["username"] %></a></h2>
+        <h3 class="paragraph"><%= slander["paragraph"] %></h3>
+        <p class="slander_date">
+          <%= slander["date_created"] %>
+        </p>
+      </a>
+    </li>
+  <% end %>
+</ul>

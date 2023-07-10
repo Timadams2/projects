@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Slander</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/whitespace-reset.css">
+    <link rel="stylesheet" href="/stylesheets/application.css">
+    <script src="/javascripts/jquery-2.1.4.js"></script>
+    <script src="/javascripts/application.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="site_name">SLANDER</h1>
+      <div class="actions">
+        <%== yield_content :header_links %>
+      </div>
+    </header>
+    
+    <% if logged_in? %>
+      <nav class="login_status"><a href="/profile/signout">Sign Out</a></nav>
+    <% else %>
+      <nav class="login_status"><a href="/profile/login">Login</a></nav>
+    <% end %>
+
+    <nav class="new"><a href="/new_slander/<%=session[:username]%>">New Slander</a></nav>
+
+    <% if session[:error] %>
+      <div class="flash_error">
+        <p><%= session.delete(:error) %></p>
+      </div>
+    <% end %>
+
+    <% if session[:success] %>
+      <div class="flash_success">
+        <p><%= session.delete(:success) %></p>
+      </div>
+    <% end %>
+    
+    <main>
+      <%== yield %>
+    </main>
+  </body>
+</html>
