@@ -1,0 +1,36 @@
+#site_name {
+  color: red;
+  text-align: center;
+}
+
+.headline {
+  text-align: center;
+}
+
+.new {
+  color: red;
+  text-align: right;
+}
+
+.single_slander {
+  color: black;
+  background: #F2A8A7;
+  outline-style: inset;
+  outline-color: black;
+}
+
+.slander_date { 
+  color: gray;
+}
+
+.username {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.paragraph { 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login_status {
+  text-align: right;
+}
