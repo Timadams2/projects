@@ -1,0 +1,19 @@
+<h3><%= @category %></h3>
+<nav><a href="/"><< back</a></nav>
+<div class="row">
+  <div class="column" class="header">Amount</div>
+  <div class="column" class="header">Category</div>
+  <div class="column" class="header">Date</div>
+</div>
+
+
+<% @payments.each do |payment| %> 
+  <div class="row">
+    <div class="column"><%= payment["amount"] %></div>
+    <div class="column"><%= payment["category"] %></div>
+    <div class="column"><%= payment["date_of_payment"] %></div>
+  </div>
+<% end %>
+
+<div class="footer">Total</div>
+<div class="footer"><%= find_total_for_cat(@category) %></div>

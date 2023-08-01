@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spending Tracker</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/application.css">
+  </head>
+  <body>
+    <header>
+      <h1 id="site_name">Spending Tracker</h1>
+    <main>
+      <% if session[:error] %>
+        <div class="flash" class="error">
+          <p><em><%= session.delete(:error) %></em></p>
+        </div>
+      <% end %>
+
+      <% if session[:success] %>
+        <div class="flash" class="success">
+          <p><em><%= session.delete(:success) %></em></p>
+        </div>
+      <% end %>
+      <%= yield %>
+    </main>
+  </body>
+</html>

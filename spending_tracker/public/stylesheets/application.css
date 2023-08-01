@@ -1,0 +1,35 @@
+#site_name {
+  font-size: 55px;
+  color: green;
+}
+
+.header {
+  font-family: sans-serif;
+  font-size: medium;
+  text-decoration: underline;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  font-size: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  height: 20px;
+}
+
+.success {
+  background: #5DE23C;
+}
+
+.error {
+  background: #FFDE64;
+}

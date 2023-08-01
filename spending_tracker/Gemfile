@@ -1,0 +1,11 @@
+source "https://rubygems.org"
+
+ruby "3.0.6"
+gem "sinatra"
+gem "sinatra-contrib"
+gem "erubis"
+gem "pg"
+gem "bcrypt"
+gem "minitest"
+gem "rack-test"
+gem "redcarpet"

@@ -1,0 +1,24 @@
+<nav class="new"><a href="/new">New Payment</a></nav>
+<nav><a href="/sort">Sort By Month</a></nav>
+
+<h3>All Payments</h3>
+
+<div class="row">
+  <div class="column" class="header">Amount</div>
+  <div class="column" class="header">Category</div>
+  <div class="column" class="header">Date</div>
+</div>
+
+
+<% @payments.each do |payment| %> 
+  <div class="row">
+    <div class="column"><%= payment["amount"] %></div>
+    <div class="column"><a href="/<%= payment["category"] %>"><%= payment["category"] %></a></div>
+    <div class="column"><%= fix_date(payment["date_of_payment"]) %></div>
+    <div><a href"/edit">edit</a></div>
+    <div><a href="/delete/<%= payment["amount"] %>/<%= payment["category"] %>/<%= payment["date_of_payment"] %>">delete</a></div>
+  </div>
+<% end %>
+
+<div class="footer">Total</div>
+<div class="footer"><%= find_total %></div>
