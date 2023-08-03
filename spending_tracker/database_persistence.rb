@@ -1,5 +1,4 @@
 require "pg"
-  
 class DatabasePersistence
   def initialize
     @db = PG.connect(dbname: "spending")

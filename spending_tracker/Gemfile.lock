@@ -7,7 +7,10 @@ GEM
     multi_json (1.15.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.9)
     pg (1.5.3)
+    puma (6.3.0)
+      nio4r (~> 2.0)
     rack (2.2.7)
     rack-protection (3.0.6)
       rack
@@ -36,13 +39,14 @@ DEPENDENCIES
   erubis
   minitest
   pg
+  puma
   rack-test
   redcarpet
   sinatra
   sinatra-contrib
 
 RUBY VERSION
-   ruby 3.0.6p216
+   ruby 3.1.4p223
 
 BUNDLED WITH
    2.2.33
